@@ -1,0 +1,91 @@
+.panel{
+  color:white;
+  border-radius: 2px;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+
+
+
+}
+
+.panel .contenido{
+  padding: 10px;
+}
+.panel .contenido  h3{
+  z-index: 5;
+  font-size: 38px;
+font-weight: bold;
+margin: 0 0 10px 0;
+white-space: nowrap;
+padding: 0;
+}
+.panel .contenido p{
+  z-index: 5;
+
+  font-size: 15px;
+}
+
+.panel  .icon{
+
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  font-size: 65px;
+  z-index: 0;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.panel a{
+  position: relative;
+  text-align: center;
+  padding: 3px 0;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.cliente{
+background: #00c0ef !important;
+  border:1px solid rgba(28, 123, 155, 0.755);
+}
+.usuario{
+  background: #6544d1 !important;
+  border:1px solid #6544d13e;
+}
+.vehiculo{
+background: #f39c12 !important;
+  border:1px solid rgb(221, 105, 10);
+}
+.alquiler{
+background: #dd4b39 !important;
+  border:1px solid rgba(168, 29, 29, 0.734);
+}
+/*
+.recibos{
+  background: rgba(61, 61, 206, 0.659) !important;
+  border:1px solid rgba(39, 39, 226, 0.796);
+  }
+.cotizaciones{
+    background: #b3fc09 !important;
+    border:1px solid #acdd3995;
+}
+.boletas{
+    background: #36d1ba !important;
+    border:1px solid #0d9ee7;
+  }
+  .nuevo_servicio{
+    background: #d13677 !important;
+    border:1px solid #d1367763;
+  }
+  .servicio_activado{
+    background: #d89e32 !important;
+    border:1px solid  #d89e324e;
+  }*/

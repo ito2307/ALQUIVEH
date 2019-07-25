@@ -1,0 +1,62 @@
+<titulo-seccion titulo="REGISTRAR VEHICULOS" anterior="/dash/vehiculos" *ngIf="!editable"></titulo-seccion>
+<titulo-seccion titulo="EDITAR VEHICULOS" anterior="/dash/vehiculos" *ngIf="editable"></titulo-seccion>
+
+
+<div class="row">
+  <div class="col-md-4 ">
+    <div class="form-group">
+      <label for="nombre_comercial"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Nombre:
+      </label>
+      <input type="text" class="form-control" [(ngModel)]="item.nombre" name="nombre" placeholder="Nombre Vehiculo">
+    </div>
+  </div>
+  <div class="col-md-4 ">
+    <div class="form-group">
+      <label for="nombre_comercial"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Marca:
+      </label>
+      <input type="text" class="form-control" [(ngModel)]="item.marca" name="marca" placeholder="Marca Vehiculo">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="nombre_comercial"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Color:
+      </label>
+      <input type="text" class="form-control" [(ngModel)]="item.color" name="color" placeholder="Color Vehiculo">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="nombre_comercial"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Placa:
+      </label>
+      <input type="text" class="form-control" [(ngModel)]="item.placa" name="placa" placeholder="Placa Vehiculo">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="nombre_comercial"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Kilometraje:
+      </label>
+      <input type="number" class="form-control" [(ngModel)]="item.kilometraje" name="kilometraje"
+        placeholder="Kms Vehiculo">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="precio"><i class="glyphicon glyphicon-money"></i> &nbsp;Precio:
+      </label>
+      <input type="number" class="form-control" [(ngModel)]="item.precio" name="precio" placeholder="Precio Vehiculo">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <input type="checkbox" [(ngModel)]="item.disponible" name="disponible">
+  {{item.disponible ? 'Disponible': 'Ocupado'}}
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <button class="btn  btn-primary" (click)="guardar()">Registrar</button>
+  </div>
+</div>

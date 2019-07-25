@@ -1,0 +1,41 @@
+<div class="contenedor">
+  <form (ngSubmit)="loguear()" class="login-form">
+    <img src="assets/imagenes/logo.png" alt="" class="logo">
+
+    <div class='form-group'>
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user-circle"></i></span>
+        <select class='form-control' name='tipo' [(ngModel)]='login.tipo' aria-describedby="basic-addon1">
+          <option value='null' disabled selected>Seleccione Tipo de Ingreso</option>
+          <option *ngFor='let opt of tipos_acceso' [value]='opt.codigo'>{{opt.nombre}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class='form-group' *ngIf="login.tipo==1">
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user-circle"></i></span>
+        <input type="text" class="form-control" required [(ngModel)]="login.usuario" name="usuario"
+          placeholder="Usuario:" aria-describedby="basic-addon1">
+      </div>
+    </div>
+    <div class='form-group' *ngIf="login.tipo==2">
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+        <input type="email" class="form-control" required [(ngModel)]="login.correo" name="correo"
+          placeholder="Ingrese su correo:" aria-describedby="basic-addon1">
+      </div>
+    </div>
+
+    <div class='form-group'>
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon2"><i class="fa fa-key"></i></span>
+        <input class="form-control" type="password" [(ngModel)]="login.clave" name="clave" placeholder="Clave de acceso:">
+      </div>
+    </div>
+
+    <button *ngIf="login.usuario && login.clave" class="btn btn-primary" type="submit">Entrar</button>&nbsp;
+    <button *ngIf="login.correo && login.clave" class="btn btn-primary" type="submit">Entrar</button>&nbsp;
+    <a class="btn btn-warning" type="submit" [routerLink]="['/registrarse']" *ngIf="login.tipo==2">Registrarse</a>
+  </form>
+</div>

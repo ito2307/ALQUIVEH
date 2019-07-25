@@ -1,0 +1,35 @@
+<titulo-seccion titulo="REGISTRAR USUARIOS" anterior="/dash/usuarios" *ngIf="!item.$key"></titulo-seccion>
+<titulo-seccion titulo="EDITAR USUARIOS" anterior="/dash/usuarios" *ngIf="item.$key"></titulo-seccion>
+
+
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="nombre_comercial"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Usuario:
+          </label>
+          <input type="text" class="form-control" [(ngModel)]="item.usuario" name="usuario">
+        </div>
+      </div>
+      <div class="col-md-12 ">
+        <div class="form-group">
+          <label for="nombre_comercial"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Clave:
+          </label>
+          <input type="text" class="form-control" [(ngModel)]="item.clave" name="clave">
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="nombre_comercial"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Nombres:
+          </label>
+          <input type="text" class="form-control" [(ngModel)]="item.nombre" name="nombre">
+        </div>
+      </div>
+      <div class="col-md-12">
+        <button class="btn  btn-primary" (click)="guardar()">Registrar</button>
+      </div>
+    </div>
+
+
+

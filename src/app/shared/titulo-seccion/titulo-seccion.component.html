@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3>
+      {{titulo}}
+      <small *ngIf="anterior" class="pull-right btn-volver">
+        <a [routerLink]="anterior">
+          <i class="fa fa-angle-double-left"></i> Volver
+        </a>
+      </small>
+    </h3>
+    <hr class="dashed">
+  </div>
+</div>

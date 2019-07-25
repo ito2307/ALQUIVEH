@@ -1,0 +1,48 @@
+<div class="wrapper ">
+  <div class="component-outlet ">
+
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <titulo-seccion titulo="REGISTRARSE" anterior="/acceso"></titulo-seccion>
+
+          </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="nombre"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Nombre:
+          </label>
+          <input type="text" class="form-control" [(ngModel)]="item.nombre" name="nombre">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="apellidos"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Apellidos:
+          </label>
+          <input type="text" class="form-control" [(ngModel)]="item.apellidos" name="apellidos">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="email"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Email:
+          </label>
+          <input type="email" class="form-control" [(ngModel)]="item.correo" name="Nro">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="clave"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Clave:
+          </label>
+          <input type="password" class="form-control" [(ngModel)]="item.clave" name="clave">
+        </div>
+      </div>
+      <div class="col-md-12">
+        <button class="btn  btn-primary" (click)="guardar()">Registrar</button>
+      </div>
+    </div>
+
+
+  </div>
+</div>

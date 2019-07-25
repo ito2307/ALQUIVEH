@@ -1,0 +1,55 @@
+<titulo-seccion titulo="REGISTRAR CLIENTES" anterior="/dash/clientes" *ngIf="!item.$key"></titulo-seccion>
+<titulo-seccion titulo="EDITAR CLIENTES" anterior="/dash/clientes" *ngIf="item.$key"></titulo-seccion>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="nombre_comercial"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Nombres:
+        </label>
+        <input type="text" class="form-control" [(ngModel)]="item.nombre" name="nombre">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-md-12 ">
+      <div class="form-group">
+        <label for="nombre_comercial"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Apellidos:
+        </label>
+        <input type="text" class="form-control" [(ngModel)]="item.apellidos" name="apellidos">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="nombre_comercial"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Nro Documento:
+        </label>
+        <input type="text" class="form-control" [(ngModel)]="item.nro_doc" name="nro_doc">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="nombre_comercial"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Email:
+        </label>
+        <input type="email" class="form-control" [(ngModel)]="item.correo" name="correo">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="nombre_comercial"><i class="glyphicon glyphicon-pushpin"></i> &nbsp;Clave:
+        </label>
+        <input type="password" class="form-control" [(ngModel)]="item.clave" name="nro_doc">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn  btn-primary" (click)="guardar()">Registrar</button>
+    </div>
+  </div>

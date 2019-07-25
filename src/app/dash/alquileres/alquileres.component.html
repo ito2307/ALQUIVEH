@@ -1,0 +1,28 @@
+<titulo-seccion titulo="Mis Alquileres"></titulo-seccion>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Cliente</th>
+      <th width="10%">Fecha Inicio</th>
+      <th width="10%">Cantidad</th>
+      <th>Vehiculo</th>
+      <th width="10%">Marca</th>
+      <th width="10%">Color</th>
+      <th width="10%">Placa</th>
+      <th width="10%">Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of dataList | async">
+      <td>{{item.cliente.nombre | uppercase}}</td>
+      <td align="center">{{item.finicio}}</td>
+      <td align="center">{{item.dias | number:'1.2-2'}}</td>
+      <td>{{item.vehiculos.nombre}}</td>
+      <td align="center">{{item.vehiculos.marca}}</td>
+      <td align="center">{{item.vehiculos.color}}</td>
+      <td align="center">{{item.vehiculos.placa}}</td>
+      <td align="center">{{item.precio | currency}}</td>
+    </tr>
+  </tbody>
+</table>

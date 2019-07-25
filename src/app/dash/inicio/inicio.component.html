@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-md-3 ">
+      <div class="panel cliente">
+        <div class="contenido">
+          <h3>{{clientes}}</h3>
+          <p>Clientes</p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-user "></i>
+        </div>
+        <a [routerLink]="['/dash/clientes']"> Mas Info
+          <i class="fa fa-arrow-circle-right"></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3 ">
+      <div class="panel usuario">
+        <div class="contenido">
+          <h3>{{usuarios}}</h3>
+          <p>Usuarios</p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-child "></i>
+        </div>
+        <a [routerLink]="['/dash/usuarios']"> Mas Info
+          <i class="fa fa-arrow-circle-right"></i>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 ">
+      <div class="panel vehiculo">
+        <div class="contenido">
+          <h3>{{vehiculos}}</h3>
+          <p>Vehiculos</p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-car "></i>
+        </div>
+        <a [routerLink]="['/dash/vehiculos']"> Mas Info
+          <i class="fa fa-arrow-circle-right"></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3 ">
+      <div class="panel alquiler">
+        <div class="contenido">
+          <h3>{{alquileres}}</h3>
+          <p>Alquileres</p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-thumb-tack"></i>
+        </div>
+        <a routerLink="/dash/alquileres"> Mas Info
+          <i class="fa fa-arrow-circle-right"></i>
+        </a>
+      </div>
+    </div>
+
+
+
+  </div>

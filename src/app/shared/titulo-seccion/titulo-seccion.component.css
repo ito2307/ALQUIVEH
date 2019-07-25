@@ -1,0 +1,31 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+h3 > .btn-volver {
+  padding-top: 5px;
+  transition: linear all 0.1s;
+}
+h3 > .btn-volver:hover {
+  margin-right: 5px;
+}
+h3 > .btn-volver a {
+  margin-right: 5px;
+}
+h3 > .btn-volver a i {
+  font-weight: bold !important;
+}
+.dashed {
+  border-style: dashed !important;
+  margin: 5px 0px 10px 0px !important;
+  padding: 0px !important;
+}

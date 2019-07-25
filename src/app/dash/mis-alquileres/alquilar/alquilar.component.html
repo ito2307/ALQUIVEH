@@ -1,0 +1,51 @@
+<titulo-seccion titulo="Alquilar Vehiculo"></titulo-seccion>
+
+<div class="row">
+  <div class="col-md-2" (click)="mostrar_modal_alquiler(vehi)" *ngFor="let vehi of listado_vehiculos">
+    <div class="item-vehiculo">
+      <span>
+        {{vehi.nombre | uppercase}} <br>
+        {{vehi.precio | currency}}
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modalAlquiler" id="modalAlquiler" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" *ngIf="vehisel">{{vehisel.nombre | uppercase}}</h4>
+      </div>
+      <div class="modal-body">
+        <div class='form-group'>
+          <label for='finicio'>Fecha Inicio:</label>
+          <input type='date' name='finicio' [(ngModel)]='alquiler.finicio' class='form-control'
+            placeholder='Ingrese Fecha Inicio:'>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class='form-group'>
+              <label for='dias'>Dias:</label>
+              <input type='number' name='dias' (change)="calcular()" (keyup)="calcular()" [(ngModel)]='alquiler.dias'
+                class='form-control' placeholder='Ingrese Dias:'>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class='form-group'>
+              <label for='precio'>Precio:</label>
+              <input type='number' name='precio' [(ngModel)]='alquiler.precio' class='form-control'
+                placeholder='Ingrese Precio:'>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="confirmar_alquilar()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
